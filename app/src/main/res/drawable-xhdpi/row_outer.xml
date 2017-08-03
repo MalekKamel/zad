@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+        <item android:state_pressed="true">
+            <shape>
+                <gradient
+                    android:startColor="#58cdf4"
+                    android:centerColor="#58cdf4"
+                    android:endColor="#58cdf4"
+                    android:angle="270" />
+                <padding android:left="5.0dip" android:top="0.0dip" android:right="0.0dip" android:bottom="5.0dip" />
+                <corners android:radius="10dp"   />
+            </shape>
+        </item>
+
+
+
+        <item android:state_focused="true">
+            <shape>
+                <gradient
+                    android:startColor="#66c7f1"
+                    android:centerColor="#66c7f1"
+                    android:endColor="#66c7f1"
+                    android:angle="270" />
+                <padding android:left="5.0dip" android:top="0.0dip" android:right="0.0dip" android:bottom="5.0dip" />
+                <corners android:radius="10dp"   />
+            </shape>
+        </item>
+
+
+
+        <item>
+            <shape>
+                <gradient
+                    android:startColor="#357f9f"
+                    android:centerColor="#357f9f"
+                    android:endColor="#357f9f"
+                    android:angle="270" />
+                <padding android:left="5.0dip" android:top="0dip" android:right="0dip" android:bottom="5.0dip" />
+
+                <corners android:radius="10dp"   />
+            </shape>
+        </item>
+
+
+    </selector>
+    <!--&lt;!&ndash;>>>>>>>>>>>>>>>>pressed&ndash;&gt;-->
+    <!--<item android:state_pressed="true">-->
+        <!--<shape>-->
+            <!--<gradient-->
+                <!--android:startColor="@color/row_pressed"-->
+                <!--android:centerColor="@color/row_pressed"-->
+                <!--android:endColor="@color/row_pressed"-->
+                <!--android:angle="270" />            <padding android:left="5.0dip" android:top="5.0dip" android:right="5.0dip" android:bottom="5.0dip" />-->
+            <!--<corners android:radius="10dp"   />-->
+        <!--</shape>-->
+    <!--</item>-->
+    <!--&lt;!&ndash;>>>>>>>>>>>>>>>>focused&ndash;&gt;-->
+    <!--<item android:state_focused="true">-->
+        <!--<shape android:shape="line">-->
+            <!--<gradient-->
+                <!--android:startColor="@color/row"-->
+                <!--android:centerColor="@color/row"-->
+                <!--android:endColor="@color/row"-->
+                <!--android:angle="270" />-->
+            <!--<padding android:left="5.0dip" android:top="5.0dip" android:right="5.0dip" android:bottom="5.0dip" />-->
+            <!--<corners android:radius="10dp"   />-->
+        <!--</shape>-->
+    <!--</item>-->
+    <!--&lt;!&ndash;>>>>>>>>>>>>>>>>shape&ndash;&gt;-->
+    <!--<item>-->
+        <!--<shape>-->
+            <!--<gradient-->
+                <!--android:startColor="#f1c6c8c9"-->
+                <!--android:centerColor="#f1c6c8c9"-->
+                <!--android:endColor="#f1c6c8c9"-->
+                <!--android:angle="270" />-->
+            <!--&lt;!&ndash;<stroke&ndash;&gt;-->
+                <!--&lt;!&ndash;android:color="#fffdfd"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:width="1dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:dashGap="3dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;/>&ndash;&gt;-->
+            <!--<padding android:left="5dip" android:top="5.0dip" android:right="5.0dip" android:bottom="5.0dip"-->
+                <!--/>-->
+            <!--<corners android:radius="8dp"   />-->
+
+        <!--</shape>-->
+    <!--</item>-->
+<!--</selector>-->
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<selector-->
+<!--xmlns:android="http://schemas.android.com/apk/res/android">-->
+<!--<item android:state_pressed="true">-->
+    <!--<shape>-->
+        <!--<gradient-->
+            <!--android:startColor="#1681ae"-->
+            <!--android:centerColor="#0c6489"-->
+            <!--android:endColor="#2e3136"-->
+            <!--android:angle="270" />            <padding android:left="5.0dip" android:top="5.0dip" android:right="5.0dip" android:bottom="5.0dip" />-->
+        <!--<corners android:radius="10dp"   />-->
+    <!--</shape>-->
+<!--</item>-->
+<!--<item android:state_focused="true">-->
+    <!--<shape>-->
+        <!--<gradient-->
+            <!--android:startColor="#66c7f1"-->
+            <!--android:centerColor="#2886ae"-->
+            <!--android:endColor="#2e3136"-->
+            <!--android:angle="270" />-->
+        <!--<padding android:left="5.0dip" android:top="5.0dip" android:right="5.0dip" android:bottom="5.0dip" />-->
+        <!--<corners android:radius="10dp"   />-->
+    <!--</shape>-->
+<!--</item>-->
+<!--<item>-->
+    <!--<shape>-->
+        <!--<gradient-->
+            <!--android:startColor="#257b9f"-->
+            <!--android:centerColor="#195f7c"-->
+            <!--android:endColor="#2e3136"-->
+            <!--android:angle="270" />-->
+        <!--<padding android:left="5.0dip" android:top="5.0dip" android:right="5.0dip" android:bottom="5.0dip"-->
+            <!--/>-->
+        <!--<corners android:radius="10dp"   />-->
+    <!--</shape>-->
+<!--</item>-->
+<!--</selector>-->

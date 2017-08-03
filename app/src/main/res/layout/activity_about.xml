@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.idea.zad.component.AppCustomTv
+        android:id="@+id/tv_appName"
+        android:textSize="@dimen/common_text_size"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:layout_marginStart="@dimen/about_app_version_bottom_margin"
+        android:layout_marginTop="@dimen/about_app_version_bottom_margin"
+        android:layout_marginLeft="@dimen/about_app_version_bottom_margin" />
+
+    <com.idea.zad.component.AppCustomTv
+        android:textSize="@dimen/common_text_size"
+        android:textStyle="bold"
+        android:id="@+id/btn_appVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/about_app_version_top_margin"
+        android:text="@string/app_version"
+        android:layout_marginStart="@dimen/about_app_version_bottom_margin"
+        android:layout_below="@+id/tv_appName"
+        android:layout_marginLeft="@dimen/about_app_version_bottom_margin" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/button_share"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_weight="1.0"
+                        android:layout_margin="@dimen/about_fields_margin"
+                        >
+
+                        <ImageView
+                            app:srcCompat="@drawable/ic_share"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <com.idea.zad.component.CustomBtn
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/btn_share_title"
+                            android:textSize="@dimen/common_text_size"
+                            android:background="@color/transparent"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/button_rate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_weight="1.0"
+                        android:layout_margin="@dimen/about_fields_margin"
+                        >
+
+                        <ImageView
+                            app:srcCompat="@drawable/ic_rate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <com.idea.zad.component.CustomBtn
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/btn_rate_title"
+                            android:textSize="@dimen/common_text_size"
+                            android:background="@color/transparent"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/button_feedback"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_weight="1.0"
+                        android:layout_margin="@dimen/about_fields_margin"
+                        >
+
+                        <ImageView
+                            app:srcCompat="@drawable/ic_feedback"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <com.idea.zad.component.CustomBtn
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/btn_feedback_title"
+                            android:textSize="@dimen/common_text_size"
+                            android:background="@color/transparent"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/button_apps"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_weight="1.0"
+                        android:layout_margin="@dimen/about_fields_margin"
+                        >
+
+                        <ImageView
+                            app:srcCompat="@drawable/ic_apps"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <com.idea.zad.component.CustomBtn
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/btn_other_apps_title"
+                            android:textSize="@dimen/common_text_size"
+                            android:background="@color/transparent"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/btnFacebook"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_weight="1.0"
+                        android:layout_margin="@dimen/about_fields_margin"
+                        >
+
+                        <ImageView
+                            app:srcCompat="@drawable/ic_facebook"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <com.idea.zad.component.CustomBtn
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/facebook"
+                            android:textSize="@dimen/common_text_size"
+                            android:background="@color/transparent"
+                            />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/btnTwitter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_weight="1.0"
+                        android:layout_margin="@dimen/about_fields_margin"
+                        >
+
+                        <ImageView
+                            app:srcCompat="@drawable/ic_twitter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <com.idea.zad.component.CustomBtn
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/twitter"
+                            android:textSize="@dimen/common_text_size"
+                            android:background="@color/transparent"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

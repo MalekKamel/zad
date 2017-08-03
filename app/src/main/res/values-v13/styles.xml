@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MyCustomTheme" parent="@android:style/Theme.Holo.Light.NoActionBar">
+        <item name="android:actionBarStyle">@style/MyActionBarTheme</item>
+        <item name="android:listSeparatorTextViewStyle">@style/PreferenceListHeader</item>
+
+    </style>
+</resources>

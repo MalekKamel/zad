@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:seekBar="http://schemas.android.com/apk/res/com.idea.zad"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        android:title="@string/general_preference_category">
+        <ListPreference     android:title="@string/listpref_font_title"
+            android:summary="@string/listpref_font_summary"
+            android:key="AppFontType"
+            android:defaultValue="1"
+            android:entries="@array/listArray"
+            android:entryValues="@array/listValues" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/details_preference_category">
+        <ListPreference     android:title="@string/listpref_font_title"
+            android:summary="@string/listpref_font_summary"
+            android:key="contentFontType"
+            android:defaultValue="1"
+            android:entries="@array/listArray"
+            android:entryValues="@array/listValues" />
+
+        <com.idea.zad.component.SeekBarPreference
+            android:key="contentTextSize"
+            android:title="@string/seekbarpref_dialog_title"
+            android:dialogTitle="@string/seekbarpref_dialog_title"
+            android:summary="@string/seekbarpref_summary"
+            android:persistent="true"
+            android:defaultValue="20"
+            seekBar:minValue="15"
+            seekBar:maxValue="35" />
+
+    </PreferenceCategory>
+
+    <com.rarepebble.colorpicker.ColorPreference
+        android:key="contentTextColor"
+        android:title="@string/font_color_title"
+        app:colorpicker_defaultColor="#000000"
+        />
+
+    <com.rarepebble.colorpicker.ColorPreference
+        android:key="contentBgColor"
+        android:title="@string/content_back_color_title"
+        app:colorpicker_defaultColor="#ffffff"
+        />
+
+    <Preference
+        android:title="@string/lecture_preview"
+        android:key="lecturePreview"
+        android:summary="@string/lecture_preview_summary"/>
+
+    <PreferenceCategory
+        android:title="@string/default_preference_category">
+
+        <com.idea.zad.component.ResetPrefsDialogPreference
+            android:key="ResetPrefs"
+            android:title="@string/reset_prefs"
+            android:dialogTitle="@string/reset_prefs"
+            android:summary="@string/resetPrefs_alertdialog_summary"
+            />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

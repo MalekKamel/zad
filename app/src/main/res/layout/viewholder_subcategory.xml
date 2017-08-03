@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    android:id="@+id/v_root"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/row_outer"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="0dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        >
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:id="@+id/btn_options"
+                android:layout_width="@dimen/options_icon_wh"
+                android:layout_height="@dimen/options_icon_wh"
+                app:srcCompat="@drawable/ic_overflow_dark"
+                android:layout_weight="0.1"
+                android:gravity="right"
+                android:layout_alignParentLeft="true"
+                />
+
+            <ImageView
+                android:id="@+id/iv_favorite"
+                android:layout_width="@dimen/options_fav_wh"
+                android:layout_height="@dimen/options_fav_wh"
+                app:srcCompat="@drawable/ic_favorite_on"
+                android:layout_toRightOf="@+id/btn_options"
+                android:layout_centerVertical="true"
+                />
+            <com.idea.zad.component.AppCustomTv
+                android:id="@+id/tv_title"
+                android:text="TITLE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/common_text_size"
+                android:textStyle="bold"
+                android:gravity="right"
+                android:layout_weight="10"
+                android:layout_alignParentRight="true"
+                android:layout_toLeftOf="@+id/btn_options"
+                android:layout_marginLeft="@dimen/options_icon_wh"
+                android:layout_toEndOf="@id/btn_options"
+                />
+
+        </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_lectureDetails"
+        android:text="DETAILS"
+        android:textSize="@dimen/common_text_size"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:gravity="right"
+        />
+    </LinearLayout>
+</android.support.v7.widget.CardView>

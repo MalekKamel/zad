@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <gradient
+                android:startColor="@color/purple_toolbar_inner"
+                android:centerColor="@color/purple_toolbar_inner"
+                android:endColor="@color/purple_toolbar_inner"/>
+    <padding
+        android:left="5.0dip"
+        android:top="5.0dip"
+        android:right="5.0dip"
+        android:bottom="5.0dip" />
+
+    <corners android:radius="10dp"   />
+  </shape>
+<!--<selector-->
+  <!--xmlns:android="http://schemas.android.com/apk/res/android">-->
+    <!--<item android:state_pressed="true">-->
+        <!--<shape>-->
+            <!--<gradient-->
+                <!--android:startColor="#1681ae"-->
+                <!--android:centerColor="#0c6489"-->
+                <!--android:endColor="#2e3136"-->
+                <!--android:angle="270" />            <padding android:left="5.0dip" android:top="5.0dip" android:right="5.0dip" android:bottom="5.0dip" />-->
+            <!--<corners android:radius="10dp"   />-->
+        <!--</shape>-->
+    <!--</item>-->
+    <!--<item android:state_focused="true">-->
+        <!--<shape>-->
+            <!--<gradient-->
+                <!--android:startColor="#66c7f1"-->
+                <!--android:centerColor="#2886ae"-->
+                <!--android:endColor="#2e3136"-->
+                <!--android:angle="270" />-->
+            <!--<padding android:left="5.0dip" android:top="5.0dip" android:right="5.0dip" android:bottom="5.0dip" />-->
+            <!--<corners android:radius="10dp"   />-->
+        <!--</shape>-->
+    <!--</item>-->
+    <!--<item>-->
+        <!--<shape>-->
+            <!--<gradient-->
+                <!--android:startColor="#31b4e7"-->
+                <!--android:centerColor="#299bc7"-->
+                <!--android:endColor="#248bb3"-->
+                <!--android:angle="270" />-->
+            <!--<padding android:left="5.0dip" android:top="5.0dip" android:right="5.0dip" android:bottom="5.0dip"-->
+                <!--/>-->
+            <!--<corners android:radius="10dp"   />-->
+        <!--</shape>-->
+    <!--</item>-->
+<!--</selector>-->
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<selector-->
+<!--xmlns:android="http://schemas.android.com/apk/res/android">-->
+<!--<item android:state_pressed="true">-->
+    <!--<shape>-->
+        <!--<gradient-->
+            <!--android:startColor="#1681ae"-->
+            <!--android:centerColor="#0c6489"-->
+            <!--android:endColor="#2e3136"-->
+            <!--android:angle="270" />            <padding android:left="5.0dip" android:top="5.0dip" android:right="5.0dip" android:bottom="5.0dip" />-->
+        <!--<corners android:radius="10dp"   />-->
+    <!--</shape>-->
+<!--</item>-->
+<!--<item android:state_focused="true">-->
+    <!--<shape>-->
+        <!--<gradient-->
+            <!--android:startColor="#66c7f1"-->
+            <!--android:centerColor="#2886ae"-->
+            <!--android:endColor="#2e3136"-->
+            <!--android:angle="270" />-->
+        <!--<padding android:left="5.0dip" android:top="5.0dip" android:right="5.0dip" android:bottom="5.0dip" />-->
+        <!--<corners android:radius="10dp"   />-->
+    <!--</shape>-->
+<!--</item>-->
+<!--<item>-->
+    <!--<shape>-->
+        <!--<gradient-->
+            <!--android:startColor="#257b9f"-->
+            <!--android:centerColor="#195f7c"-->
+            <!--android:endColor="#2e3136"-->
+            <!--android:angle="270" />-->
+        <!--<padding android:left="5.0dip" android:top="5.0dip" android:right="5.0dip" android:bottom="5.0dip"-->
+            <!--/>-->
+        <!--<corners android:radius="10dp"   />-->
+    <!--</shape>-->
+<!--</item>-->
+<!--</selector>-->

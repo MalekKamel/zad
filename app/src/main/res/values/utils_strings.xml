@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="connect_to_network">الرجاء الاتصال بالشبكة</string>
+    <string name="required">مطلوب</string>
+    <string name="email_invalid">البريد الإلكتروني غير صحيح.</string>
+    <string name="phone_incorrect">رقم الهاتف غير صحيح.</string>
+    <string name="passwords_not_identical">كلمتا المرور غير متطابقتين</string>
+    <string name="credit_num_length_incorrect">يجب أن يكون طول رقم الائتمان 16 رقما.</string>
+    <string name="credit_cvv_length_incorrect">يجب أن يكون طول CVV ثلاثة أرقام3.</string>
+    <string name="error_two_digits">يجب أن يكون رقمين.</string>
+
+</resources>

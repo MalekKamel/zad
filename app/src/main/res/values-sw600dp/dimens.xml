@@ -1,0 +1,19 @@
+<resources>
+
+    <!--
+         Customize dimensions originally defined in res/values/dimens.xml (such as
+         screen margins) for sw600dp devices (e.g. 7" tablets) here.
+    -->
+
+    <dimen name="options_icon_wh">35dp</dimen>
+    <dimen name="options_fav_wh">25dp</dimen>
+    <dimen name="options_icon_h">20dp</dimen>
+    <dimen name="small_icon_wh">34dip</dimen>
+    <dimen name="mid_icon_wh">44dip</dimen>
+    <dimen name="drawer_header_wh">100dip</dimen>
+    <dimen name="category_icon_wh">100dip</dimen>
+    <dimen name="common_text_size">18sp</dimen>
+    <dimen name="content_text_size">18sp</dimen>
+    <dimen name="about_fields_margin">15dp</dimen>
+
+</resources>

@@ -1,0 +1,98 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+apply plugin: 'realm-android'
+apply plugin: 'io.fabric'
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.1"
+
+    defaultConfig {
+        applicationId "com.idea.zad"
+        minSdkVersion 14
+        targetSdkVersion 26
+        versionCode 2
+        versionName "2.0"
+
+        vectorDrawables.useSupportLibrary = true
+        /**
+         * For multiDex
+         */
+        multiDexEnabled true
+    }
+
+    /**
+     * [START] multiDex
+     */
+    productFlavors {
+        // Define separate dev and prod product flavors.
+        dev {
+            // dev utilizes minSDKVersion = 21 to allow the Android gradle plugin
+            // to pre-dex each module and produce an APK that can be tested on
+            // Android Lollipop without time consuming dex merging processes.
+            minSdkVersion 19
+        }
+        prod {
+            // The actual minSdkVersion for the application.
+            minSdkVersion 15
+        }
+    }
+
+    /**
+     * solves Error converting bytecode to dex
+     */
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+    /**
+     * [END] multiDex
+     */
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    // IMPORTANT: for RxJava
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+    }
+}
+
+repositories {
+    maven {
+        url 'https://github.com/uPhyca/stetho-realm/raw/master/maven-repo'
+    }
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+
+    compile libraries.supportAppCompat
+    compile libraries.supportDesign
+    compile libraries.multidex
+    compile libraries.butterknife
+    compile libraries.butterknifeCompiler
+    compile libraries.eventBus
+    compile libraries.parceler
+    compile libraries.supportPreference
+    compile libraries.gson
+    compile libraries.materilaDialog
+    compile libraries.rxjava
+    compile libraries.rxandroid
+    apt libraries.parcelerAnnotaitionProcessor
+    compile libraries.admob
+    compile libraries.cardView
+
+    compile('com.crashlytics.sdk.android:crashlytics:2.6.8@aar') {
+        transitive = true;
+    }
+    compile 'com.rarepebble:colorpicker:1.6.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+}
+
+

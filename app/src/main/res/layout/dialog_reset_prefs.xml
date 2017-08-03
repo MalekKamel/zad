@@ -1,0 +1,20 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:paddingLeft="20dp"
+	android:paddingRight="20dp"
+	android:paddingTop="10dp"
+	android:paddingBottom="20dp"
+	>
+
+	<com.idea.zad.component.AppCustomTv
+		android:id="@+id/btn_resetPrefs"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:textColor="@color/gray_color"
+		android:text="@string/resetPrefs_alertdialog_content"
+		android:textSize="@dimen/common_text_size"
+		/>
+
+</RelativeLayout>

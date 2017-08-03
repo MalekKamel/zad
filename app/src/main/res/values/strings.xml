@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="no_search_result">ﻻ يوجد نتائج</string>
+    <string name="feedback">اقتراح خاص ببرنامج</string>
+    <string name="description">بَرنامجٌ مجانىٌ مفتوحُ المصدرِ بدونِ إعﻻنات</string>
+    <string name="extra_text">يضم العديد من الخطب والمحاضرات التى تهم كل مسلم وداعية</string>
+    <string name="searchButton">بحث</string>
+    <string name="share_via">أرسل عن طريق</string>
+    <string name="app_name">زادُ الدُعَاة</string>
+
+    <string-array name="category_titles">
+        <item>العقيدة الإسلامية</item>
+        <item>الزهد والرقائق</item>
+        <item>الآداب والأخلاق</item>
+        <item>الفقه</item>
+        <item>التربية والأسرة المسلمة</item>
+        <item>قضايا إسلامية معاصرة</item>
+        <item>موضوعات متنوعة</item>
+        <item>التاريخ والقصص</item>
+        <item>مناسبات دورية</item>
+        <item>مواسم الخير</item>
+    </string-array>
+
+    <string name="no_bookmarks">القائمة فارغة</string>
+    <string name="default_preference_category"> الإعدادات الافتراضية</string>
+    <string name="reset_prefs">استعادة الإعدادات الافتراضية</string>
+    <string name="resetPrefs_title">استعادة الضبط</string>
+    <string name="resetPrefs_alertdialog_content">هل تريد بالفعل استعادة الإعدادات الافتراضية؟</string>
+    <string name="resetPrefs_alertdialog_summary">يمكنك استعادة الإعدادت الافتراضية للبرنامج من خلال هذا الخيار</string>
+    <string name="font_color_title">لون الخط</string>
+    <string name="content_back_color_title">لون الخلفية</string>
+    <string name="listpref_font_title">نوع الخط</string>
+    <string name="listpref_font_summary">يمكنك اختيار نوع الخط المناسب من خلال هذا الخيار</string>
+    <string name="seekbarpref_summary">حجم الخط الحالى: %1$d</string>
+    <string name="seekbarpref_dialog_title">حجم الخط</string>
+    <string name="general_preference_category">إعدادات عامة</string>
+    <string name="details_preference_category">إعدادات المحتوى</string>
+    <string name="picker_preference_category">لون الخط</string>
+    <string name="spinner_title">نوع الخط</string>
+    <string name="search_hint"> كلمة البحث</string>
+    <string name="title_activity_settings">الإعدادات</string>
+    <string name="extra_subject">بَرنامَجُ زادُ الدُعَاة</string>
+    <string name="references">المصادر</string>
+    <string name="islamDoor">http://islamdoor.com/</string>
+    <string name="lecture_preview">معاينة المحتوى</string>
+    <string name="lecture_preview_summary">اضغط لمعاينة تفضيلات المحتوى: الألوان والخط والخلفية. </string>
+
+    <string name="settings">الضبط</string>
+    <string name="about">حول</string>
+    <string name="edit">تعديل</string>
+    <string name="share">مشاركة</string>
+    <string name="favorites">المفضلة</string>
+    <string name="favorite">مفضلة</string>
+    <string name="search">البحث</string>
+    <string name="slogan">خطب ومحاضرات</string>
+    <string name="slogan_brackets">(خطب ومحاضرات)</string>
+    <string name="save">حفظ</string>
+    <string name="copy">نسخ</string>
+    <string name="fav_on">إضافة للمفضلة</string>
+    <string name="fav_off">حذف من المفضلة</string>
+    <string name="update_done">تم تعديل المحتوى بنجاح.</string>
+    <string name="update_error">عفوا لم نتمكن من تعديل المحتوى، الرجاء المحاولة مرة أخرى.</string>
+
+    <!--ABOUT-->
+    <string name="suggest_app_description">أنصح بتحميل تطبيق</string>
+    <string name="app_description">لأندرويد ، الذي يضم أكثر من خمسمائة خطبة ومحاضرة ، والتى تهم كل مسلم وداعية.</string>
+    <string name="shared">تمت المشاركة عن طريق تطبيق</string>
+    <string name="for_android">لأندرويد</string>
+    <string name="sent_by_txt">مرسلة من:</string>
+    <string name="about_feedback_title">اقتراح خاص ببرنامج</string>
+    <string name="activity_title_about">حول</string>
+    <string name="about_app">حول</string>
+    <string name="app_version">الإصدار</string>
+    <string name="btn_share_title">مشاركة</string>
+    <string name="btn_other_apps_title">تطبيقاتنا</string>
+    <string name="btn_rate_title">تقييم</string>
+    <string name="btn_feedback_title">اقتراح</string>
+    <string name="twitter">تويتر</string>
+    <string name="facebook">فيسبوك</string>
+    <string name="copied">تم النسخ إلى الحافظة</string>
+
+    <string name="category">الأقسام</string>
+    <string name="subcategory">المحتوى</string>
+
+    <string name="idea_soft">Idea Soft</string>
+    <string name="islam_door_reference">تم نسخ المحتوى كاملا من موقع زاد الداعي \n جزى الله القائمين عليه خير الجزاء \n رابط الموقع: http://www.islamdoor.com/k/</string>
+
+</resources>

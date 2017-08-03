@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/title_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/toolbar"
+        >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/btn_options"
+                    android:layout_width="@dimen/options_icon_wh"
+                    android:layout_height="@dimen/options_icon_wh"
+                    app:srcCompat="@drawable/ic_overflow_light"
+                    android:layout_weight="0.1"
+                    android:gravity="right"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_gravity="center"
+                    android:layout_centerVertical="true"
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_favorite"
+                    android:layout_width="@dimen/options_icon_wh"
+                    android:layout_height="@dimen/options_icon_wh"
+                    app:srcCompat="@drawable/ic_favorite_white"
+                    android:layout_gravity="center"
+                    android:layout_toRightOf="@+id/btn_options"
+                    android:layout_centerVertical="true"/>
+
+
+                <com.idea.zad.component.AppCustomTv
+                    android:id="@+id/tv_title"
+                    android:text="ddddddddddddd"
+                    android:textSize="@dimen/common_text_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_toRightOf="@+id/btn_options"
+                    android:layout_centerVertical="true"
+                    />
+            </RelativeLayout>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.CardView
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/row_outer"
+        app:cardCornerRadius="0dp"
+        android:layout_margin="8dp"
+        android:layout_below="@+id/title_linear"
+
+        >
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scroll"
+            android:baselineAligned="false"
+
+            android:padding="5dp">
+
+            <com.idea.zad.component.ContentTextView
+                android:id="@+id/tv_lectureDetails"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center" />
+        </ScrollView>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,45 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:paddingLeft="20dp"
+	android:paddingRight="20dp"
+	android:paddingTop="10dp"
+	android:paddingBottom="20dp">
+
+	<com.idea.zad.component.AppCustomTv
+		android:id="@+id/current_value"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentTop="true"
+		android:layout_centerHorizontal="true"
+		android:textColor="@color/black_color"
+		android:textSize="@dimen/common_text_size"
+		/>
+		
+	<SeekBar
+		android:id="@+id/seek_bar"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/current_value"
+		android:layout_marginTop="10dp"/>
+	
+	<com.idea.zad.component.AppCustomTv
+		android:id="@+id/min_value"
+		android:textSize="@dimen/common_text_size"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_above="@id/seek_bar"
+		android:layout_alignParentLeft="true"
+		android:textColor="@color/gray_color" />
+
+	<com.idea.zad.component.AppCustomTv
+		android:id="@+id/max_value"
+		android:textSize="@dimen/common_text_size"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_above="@id/seek_bar"
+		android:layout_alignParentRight="true"
+		android:textColor="@color/gray_color" />		
+				
+</RelativeLayout>

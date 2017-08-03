@@ -1,0 +1,102 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="about_app_name_icon_height">78.0dip</dimen>
+    <dimen name="about_buttons_button_padding">5.1999817dip</dimen>
+    <dimen name="about_buttons_wrapper_margin_bottom">40.5dip</dimen>
+    <dimen name="about_buttons_wrapper_padding">26.0dip</dimen>
+    <dimen name="about_buttons_wrapper_width">325.0dip</dimen>
+    <dimen name="about_buttons_wrapper_height">280.0dip</dimen>
+    <dimen name="about_footer_icon_margin">19.5dip</dimen>
+    <dimen name="about_logo_size">130.0dip</dimen>
+    <dimen name="actionbar_title_text_size">20.799988sp</dimen>
+    <dimen name="button_margin">5.1999817dip</dimen>
+    <dimen name="category_row_bookmark_icon_height">50.0dip</dimen>
+    <dimen name="category_row_decorator_width">26.0dip</dimen>
+    <dimen name="category_row_height">42.0dip</dimen>
+    <dimen name="category_section_margin">11.0dip</dimen>
+    <dimen name="city_chooser_filter_height">65.0dip</dimen>
+    <dimen name="city_chooser_row_country_name_text_size">16.899994sp</dimen>
+    <dimen name="city_chooser_title_font_size">23.399994sp</dimen>
+    <dimen name="city_chooser_title_height">65.0dip</dimen>
+    <dimen name="city_select_list_height">260.0dip</dimen>
+    <dimen name="common_button_height">45.5dip</dimen>
+    <dimen name="common_button_text_size">15.599976sp</dimen>
+    <dimen name="common_button_width">91.0dip</dimen>
+    <dimen name="common_divider_height">1.2999878dip</dimen>
+    <dimen name="dialog_close_size">38.0dip</dimen>
+    <dimen name="navigation_drawer_icon_size">39.0dip</dimen>
+    <dimen name="navigation_drawer_margin">13.0dip</dimen>
+    <dimen name="navigation_drawer_text_size">20.799988sp</dimen>
+    <dimen name="navigation_drawer_width">312.0dip</dimen>
+    <dimen name="poll_button_height">65.0dip</dimen>
+    <dimen name="poll_comment_height">104.0dip</dimen>
+    <dimen name="poll_radio_buttons_gap">65.0dip</dimen>
+    <dimen name="settings_footer_height">13.0dip</dimen>
+    <dimen name="settings_footer_radius">6.5dip</dimen>
+    <dimen name="settings_hint_close_button_size">40.0dip</dimen>
+    <dimen name="settings_notification_wakeup_sleep_preview">16.899994sp</dimen>
+    <dimen name="settings_row_height">58.5dip</dimen>
+    <dimen name="settings_row_padding">13.0dip</dimen>
+    <dimen name="settings_title_padding">13.0dip</dimen>
+    <dimen name="splash_loading_margin">104.0dip</dimen>
+    <dimen name="zekr_counter_bar_width">6.5dip</dimen>
+    <dimen name="zekr_counter_gap">3.899994dip</dimen>
+    <dimen name="zekr_counter_paging_text_size">18.199982sp</dimen>
+    <dimen name="zekr_counter_pw_margin_land">26.0dip</dimen>
+    <dimen name="zekr_counter_text_margin">39.0dip</dimen>
+    <dimen name="zekr_counter_wheel_text_size">28.599976sp</dimen>
+    <dimen name="zekr_footer_height">104.0dip</dimen>
+    <dimen name="zekr_inner_padding">19.5dip</dimen>
+    <dimen name="zekr_inner_padding_top">40.0dip</dimen>
+    <dimen name="zekr_land_counter_wheel_padding">3.899994dip</dimen>
+    <dimen name="zekr_land_counter_wheel_wrapper_padding">10.399994dip</dimen>
+    <dimen name="zekr_land_footer_width">117.0dip</dimen>
+    <dimen name="zekr_title_text_size">23.399994sp</dimen>
+    <dimen name="zekr_view_hint_text_size">18.199982sp</dimen>
+
+    <!-- ==============COLOR PICKER================= -->
+    <dimen name="margin">16dp</dimen>
+    <dimen name="sliderWidth">36dp</dimen> <!--Matches checker pattern-->
+    <dimen name="hexFieldWidth">88dp</dimen> <!-- 2 * slider width + margin. Explicit for when alpha is hidden in landscape -->
+    <dimen name="preference_thumbnail_size">48dp</dimen>
+    <dimen name="toolbar_height">70dip</dimen>
+    <dimen name="ic_toolbar_width">35dip</dimen>
+    <dimen name="ic_toolbar_height">35dip</dimen>
+    <dimen name="flag_width">140dp</dimen>
+    <dimen name="flag_height">50dp</dimen>
+    <dimen name="flag_height_layout">50dp</dimen>
+    <dimen name="options_icon_wh">30dp</dimen>
+    <dimen name="options_fav_wh">20dp</dimen>
+    <dimen name="options_icon_h">20dp</dimen>
+
+    <dimen name="category_row_margin">5dip</dimen>
+    <dimen name="small_icon_wh">30dip</dimen>
+    <dimen name="mid_icon_wh">34dip</dimen>
+    <dimen name="drawer_header_wh">50dip</dimen>
+    <dimen name="category_icon_wh">50dip</dimen>
+
+    <dimen name="common_text_size">13sp</dimen>
+    <dimen name="content_text_size">15sp</dimen>
+
+    <!--ABOUT-->
+    <dimen name="about_bottom_icons_size">65.0dip</dimen>
+    <dimen name="about_button_text_size">16.0sp</dimen>
+    <dimen name="about_button_height">40.0dip</dimen>
+    <dimen name="about_button_margin">1.0dip</dimen>
+    <dimen name="about_app_name_text_size">22.0sp</dimen>
+    <dimen name="about_app_name_top_margin">5.0dip</dimen>
+    <dimen name="about_app_version_text_size">16.0sp</dimen>
+    <dimen name="about_app_version_top_margin">7.0dip</dimen>
+    <dimen name="about_app_version_bottom_margin">40dip</dimen>
+    <dimen name="common_button_stroke">1.0dip</dimen>
+    <dimen name="about_button_bg_radius">12.0dip</dimen>
+    <dimen name="about_button_group_margin">15.0dip</dimen>
+    <dimen name="top_bottom_margin">6dp</dimen>
+    <dimen name="left_right_margin">5dp</dimen>
+    <dimen name="top_bottom_padding">20dp</dimen>
+    <dimen name="about_fields_margin">2.5dp</dimen>
+
+
+</resources>
