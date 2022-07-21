@@ -3,10 +3,14 @@ package com.idea.zad.ui.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.idea.zad.R;
@@ -22,8 +26,6 @@ import org.parceler.Parcels;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
-import butterknife.BindView;
-import butterknife.OnTextChanged;
 import io.reactivex.ObservableSource;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
@@ -33,12 +35,9 @@ import io.reactivex.schedulers.Schedulers;
 import io.reactivex.subjects.PublishSubject;
 
 public class SearchActivity extends BaseActivity implements ToolbarInit{
-
-    @BindView(R.id.rv)
     RecyclerView rv;
-
-    @BindView(R.id.iv_empty)
     ImageView iv_empty;
+    EditText et_search;
 
     private DatabaseHelper databaseHelper = DatabaseHelper.getInstance();
     private PublishSubject<String> searchSubject;
@@ -62,6 +61,24 @@ public class SearchActivity extends BaseActivity implements ToolbarInit{
     }
 
     private void init() {
+        rv = findViewById(R.id.rv);
+        iv_empty = findViewById(R.id.iv_empty);
+        et_search = findViewById(R.id.et_search);
+        et_search.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int i, int i1, int i2) {
+                searchSubject.onNext(s.toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+            }
+        });
+
         rv.setLayoutManager(new LinearLayoutManager(this));
         initSearchObservable();
     }
@@ -73,32 +90,19 @@ public class SearchActivity extends BaseActivity implements ToolbarInit{
                         .debounce(400, TimeUnit.MILLISECONDS)
                         .observeOn(AndroidSchedulers.mainThread())
                         .subscribeOn(Schedulers.io())
-                        .flatMap(new Function<String, ObservableSource<ArrayList<Lecture>>>() {
-                            @Override
-                            public ObservableSource<ArrayList<Lecture>> apply(String s) throws Exception {
-                                return databaseHelper.search(s);
-                            }
-                        })
-                        .subscribe(new Consumer<ArrayList<Lecture>>() {
-                            @Override
-                            public void accept(ArrayList<Lecture> lectures) throws Exception {
-                                int emptyIconVisibility = lectures.isEmpty() ? View.VISIBLE : View.GONE;
-                                iv_empty.setVisibility(emptyIconVisibility);
+                        .flatMap((Function<String, ObservableSource<ArrayList<Lecture>>>) s -> databaseHelper.search(s))
+                        .subscribe(lectures -> {
+                            int emptyIconVisibility = lectures.isEmpty() ? View.VISIBLE : View.GONE;
+                            iv_empty.setVisibility(emptyIconVisibility);
 
-                                if (lectureSubcategoryAdapter == null)
-                                    lectureSubcategoryAdapter = new LectureSubcategoryAdapter(
-                                            lectures,
-                                            SearchActivity.this);
-                                else
-                                    lectureSubcategoryAdapter.setList(lectures);
-                                rv.setAdapter(lectureSubcategoryAdapter);
-                            }
+                            if (lectureSubcategoryAdapter == null)
+                                lectureSubcategoryAdapter = new LectureSubcategoryAdapter(
+                                        lectures,
+                                        SearchActivity.this);
+                            else
+                                lectureSubcategoryAdapter.setList(lectures);
+                            rv.setAdapter(lectureSubcategoryAdapter);
                         });
-    }
-
-    @OnTextChanged(R.id.et_search)
-    public void onTextChanged(CharSequence s, int start, int before, int count) {
-        searchSubject.onNext(s.toString());
     }
 
     @Override

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.design.widget.CoordinatorLayout
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:id="@+id/mainCoordinator">
 
-    <android.support.v4.widget.DrawerLayout
+    <androidx.drawerlayout.widget.DrawerLayout
         android:fitsSystemWindows="true"
         android:id="@+id/drawer_layout"
         android:layout_width="match_parent"
@@ -32,7 +32,7 @@
         </LinearLayout>
 
         <!-- IMPORTANT: MUST BE AT BOTTOM -->
-        <android.support.design.widget.NavigationView
+        <com.google.android.material.navigation.NavigationView
             android:fitsSystemWindows="true"
             xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -46,5 +46,5 @@
             app:menu="@menu/menu_drawer"
             />
 
-    </android.support.v4.widget.DrawerLayout>
-</android.support.design.widget.CoordinatorLayout>
+    </androidx.drawerlayout.widget.DrawerLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

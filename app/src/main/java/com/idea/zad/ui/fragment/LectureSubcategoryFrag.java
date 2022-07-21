@@ -1,13 +1,13 @@
 package com.idea.zad.ui.fragment;
 
 
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
+
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.idea.zad.R;
 import com.idea.zad.adapter.LectureSubcategoryAdapter;
@@ -24,12 +24,8 @@ import org.parceler.Parcels;
 
 import java.util.ArrayList;
 
-import butterknife.BindView;
+public class LectureSubcategoryFrag extends BaseFragment {
 
-
-public class LectureSubcategoryFrag extends BaseFragment{
-
-    @BindView(R.id.rv)
     RecyclerView rv;
 
     private LectureCategory category;
@@ -59,6 +55,7 @@ public class LectureSubcategoryFrag extends BaseFragment{
     }
 
     private void setData() {
+        rv = getView().findViewById(R.id.rv);
         rv.setLayoutManager(new LinearLayoutManager(getContext()));
 
         ArrayList<Lecture> lectures = DatabaseHelper.getInstance().getLecturesByCategory(category.getId());
@@ -83,12 +80,12 @@ public class LectureSubcategoryFrag extends BaseFragment{
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        switch (requestCode){
+        switch (requestCode) {
             case RequestCode.CONTENT_ACTIVITY:
             case RequestCode.EDIT_ACTIVITY:
-                if (data != null){
+                if (data != null) {
                     Lecture lecture = Parcels.unwrap(data.getParcelableExtra(INTENT_PARCELABLE));
-                    ((LectureSubcategoryAdapter)rv.getAdapter()).updateItem(lecture);
+                    ((LectureSubcategoryAdapter) rv.getAdapter()).updateItem(lecture);
                 }
                 break;
 

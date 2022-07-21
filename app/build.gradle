@@ -1,52 +1,20 @@
 apply plugin: 'com.android.application'
-apply plugin: 'android-apt'
-apply plugin: 'realm-android'
-apply plugin: 'io.fabric'
+// TODO
+//apply plugin: 'android-apt'
+//apply plugin: 'realm-android'
+//apply plugin: 'io.fabric'
 android {
-    compileSdkVersion 26
-    buildToolsVersion "26.0.1"
+    compileSdkVersion 32
 
     defaultConfig {
         applicationId "com.idea.zad"
-        minSdkVersion 14
-        targetSdkVersion 26
+        minSdkVersion 21
+        targetSdkVersion 32
         versionCode 2
         versionName "2.0"
 
         vectorDrawables.useSupportLibrary = true
-        /**
-         * For multiDex
-         */
-        multiDexEnabled true
     }
-
-    /**
-     * [START] multiDex
-     */
-    productFlavors {
-        // Define separate dev and prod product flavors.
-        dev {
-            // dev utilizes minSDKVersion = 21 to allow the Android gradle plugin
-            // to pre-dex each module and produce an APK that can be tested on
-            // Android Lollipop without time consuming dex merging processes.
-            minSdkVersion 19
-        }
-        prod {
-            // The actual minSdkVersion for the application.
-            minSdkVersion 15
-        }
-    }
-
-    /**
-     * solves Error converting bytecode to dex
-     */
-    dexOptions {
-        javaMaxHeapSize "4g"
-    }
-
-    /**
-     * [END] multiDex
-     */
 
     buildTypes {
         release {
@@ -55,44 +23,39 @@ android {
         }
     }
 
-    // IMPORTANT: for RxJava
     packagingOptions {
-        exclude 'META-INF/rxjava.properties'
+        resources {
+            excludes += ['META-INF/rxjava.properties', 'META-INF/DEPENDENCIES.txt', 'META-INF/LICENSE.txt', 'META-INF/NOTICE.txt', 'META-INF/NOTICE', 'META-INF/LICENSE', 'META-INF/DEPENDENCIES', 'META-INF/notice.txt', 'META-INF/license.txt', 'META-INF/dependencies.txt', 'META-INF/LGPL2.1', 'META-INF/MANIFEST.MF']
+        }
     }
-}
-
-repositories {
-    maven {
-        url 'https://github.com/uPhyca/stetho-realm/raw/master/maven-repo'
-    }
-    maven { url 'https://maven.fabric.io/public' }
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
 
-    compile libraries.supportAppCompat
-    compile libraries.supportDesign
-    compile libraries.multidex
-    compile libraries.butterknife
-    compile libraries.butterknifeCompiler
-    compile libraries.eventBus
-    compile libraries.parceler
-    compile libraries.supportPreference
-    compile libraries.gson
-    compile libraries.materilaDialog
-    compile libraries.rxjava
-    compile libraries.rxandroid
-    apt libraries.parcelerAnnotaitionProcessor
-    compile libraries.admob
-    compile libraries.cardView
+    implementation libraries.supportAppCompat
+    implementation libraries.supportDesign
+    implementation libraries.multidex
 
-    compile('com.crashlytics.sdk.android:crashlytics:2.6.8@aar') {
+    implementation "com.jakewharton:butterknife:10.2.3"
+    annotationProcessor "com.jakewharton:butterknife-compiler:10.2.3"
+
+    implementation libraries.eventBus
+    implementation libraries.parceler
+    implementation libraries.supportPreference
+    implementation libraries.gson
+    implementation libraries.materilaDialog
+    implementation libraries.rxjava
+    implementation libraries.rxandroid
+    annotationProcessor libraries.parcelerAnnotaitionProcessor
+    implementation libraries.admob
+    implementation libraries.cardView
+
+    implementation('com.crashlytics.sdk.android:crashlytics:2.6.8@aar') {
         transitive = true;
     }
-    compile 'com.rarepebble:colorpicker:1.6.0'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    testCompile 'junit:junit:4.12'
+    implementation 'com.rarepebble:colorpicker:1.6.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
 }
 
 

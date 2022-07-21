@@ -1,6 +1,6 @@
 package com.idea.zad.adapter;
 
-import android.support.v4.app.FragmentActivity;
+import androidx.fragment.app.FragmentActivity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -17,9 +17,6 @@ import com.idea.zad.ui.fragment.dialog.OptionsDialog;
 import org.parceler.Parcels;
 
 import java.util.ArrayList;
-
-import butterknife.BindView;
-import butterknife.OnClick;
 
 /**
  * Created by Sha on 4/20/17.
@@ -51,20 +48,50 @@ public class LectureSubcategoryAdapter
     }
 
     class Vh extends BaseViewHolder<Lecture> {
-        @BindView(R.id.tv_title)
         TextView tv_title;
-
-        @BindView(R.id.tv_lectureDetails)
         TextView tv_lectureDetails;
-
-        @BindView(R.id.btn_options)
         ImageView btn_options;
-
-        @BindView(R.id.iv_favorite)
         ImageView iv_favorite;
 
         private Vh(ViewGroup viewGroup) {
             super(viewGroup, R.layout.viewholder_subcategory);
+            tv_title = itemView.findViewById(R.id.tv_title);
+            tv_lectureDetails = itemView.findViewById(R.id.tv_lectureDetails);
+            btn_options = itemView.findViewById(R.id.btn_options);
+            iv_favorite = itemView.findViewById(R.id.iv_favorite);
+
+            itemView.findViewById(R.id.tv_lectureDetails).setOnClickListener(v -> {
+                Navigator navigator = new Navigator(activity);
+                navigator.attachExtraParcelable(
+                        Parcels.wrap(getList().get(getAdapterPosition())));
+                navigator.startActivityForResult(LectureActivity.class, RequestCode.CONTENT_ACTIVITY);
+            });
+
+            itemView.findViewById(R.id.btn_options).setOnClickListener(v -> {
+                OptionsDialog dialog =
+                        OptionsDialog.newInstance(
+                                getList().get(getAdapterPosition()),
+                                new OptionsDialog.OptionsDialogCallback() {
+                                    @Override
+                                    public void onFavoriteOptionClicked(Lecture lecture) {
+                                        for (int i = 0 ; i < getList().size() ; i++){
+                                            if (getList().get(i).getId() == lecture.getId()){
+                                                getList().set(i, lecture);
+                                                notifyItemChanged(i);
+                                                break;
+                                            }
+                                        }
+                                    }
+
+                                    @Override
+                                    public void onEdit(Lecture lecture) {
+
+                                    }
+                                });
+                dialog.show(
+                        activity.getSupportFragmentManager(),
+                        OptionsDialog.class.getSimpleName());
+            });
         }
 
         @Override
@@ -80,49 +107,6 @@ public class LectureSubcategoryAdapter
             int favoriteIconVisibility = lecture.isFavorite() ? View.VISIBLE : View.GONE;
             iv_favorite.setVisibility(favoriteIconVisibility);
         }
-
-        @OnClick({
-                R.id.tv_lectureDetails,
-                R.id.btn_options,
-        })
-        public void onClick(View v){
-            switch (v.getId()){
-
-                case R.id.tv_lectureDetails:
-                    Navigator navigator = new Navigator(activity);
-                    navigator.attachExtraParcelable(
-                            Parcels.wrap(getList().get(getLayoutPosition())));
-                    navigator.startActivityForResult(LectureActivity.class, RequestCode.CONTENT_ACTIVITY);
-                    break;
-
-                case R.id.btn_options:
-                    OptionsDialog dialog =
-                            OptionsDialog.newInstance(
-                                    getList().get(getLayoutPosition()),
-                                    new OptionsDialog.OptionsDialogCallback() {
-                                        @Override
-                                        public void onFavoriteOptionClicked(Lecture lecture) {
-                                            for (int i = 0 ; i < getList().size() ; i++){
-                                                if (getList().get(i).getId() == lecture.getId()){
-                                                    getList().set(i, lecture);
-                                                    notifyItemChanged(i);
-                                                    break;
-                                                }
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onEdit(Lecture lecture) {
-
-                                        }
-                                    });
-                    dialog.show(
-                            activity.getSupportFragmentManager(),
-                            OptionsDialog.class.getSimpleName());
-                    break;
-            }
-        }
     }
-
 
 }

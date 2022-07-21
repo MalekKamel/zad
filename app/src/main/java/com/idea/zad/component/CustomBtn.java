@@ -6,7 +6,7 @@ import android.util.AttributeSet;
 
 import com.idea.zad.util.SharedPref;
 
-public class CustomBtn extends android.support.v7.widget.AppCompatButton {
+public class CustomBtn extends androidx.appcompat.widget.AppCompatButton {
 
     public CustomBtn(Context context) {
         super(context);

@@ -3,8 +3,8 @@ package com.idea.zad.ui.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -20,14 +20,10 @@ import org.parceler.Parcels;
 
 import java.util.ArrayList;
 
-import butterknife.BindView;
 
 public class FavoriteActivity extends BaseActivity implements ToolbarActionInit{
 
-    @BindView(R.id.rv)
     RecyclerView rv;
-
-    @BindView(R.id.iv_empty)
     ImageView iv_empty;
 
     @Override
@@ -48,6 +44,8 @@ public class FavoriteActivity extends BaseActivity implements ToolbarActionInit{
     }
 
     private void init() {
+        rv = findViewById(R.id.rv);
+        iv_empty = findViewById(R.id.iv_empty);
         rv.setLayoutManager(new LinearLayoutManager(this));
     }
 

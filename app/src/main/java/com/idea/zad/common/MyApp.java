@@ -1,14 +1,12 @@
 package com.idea.zad.common;
 
 import android.content.Context;
-import android.support.multidex.MultiDexApplication;
+import androidx.multidex.MultiDexApplication;
 
 import com.crashlytics.android.Crashlytics;
 import com.idea.zad.database.CopyDataBase;
 
 import io.fabric.sdk.android.Fabric;
-import io.realm.Realm;
-import io.realm.RealmConfiguration;
 
 
 /**
@@ -24,18 +22,9 @@ public class MyApp extends MultiDexApplication {
         super.onCreate();
         sContext = getApplicationContext();
 
-        Realm.init(this);
-
-        RealmConfiguration realmConfiguration = new RealmConfiguration.Builder()
-                .name(Realm.DEFAULT_REALM_NAME)
-                .schemaVersion(1)
-                .deleteRealmIfMigrationNeeded()
-                .build();
-        Realm.setDefaultConfiguration(realmConfiguration);
-
         CopyDataBase.prepareDatabase();
 
-        Fabric.with(this, new Crashlytics());
+//        Fabric.with(this, new Crashlytics());
     }
 
     public static Context getContext(){

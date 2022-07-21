@@ -1,15 +1,13 @@
 package com.idea.zad.common.frag;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.idea.zad.common.presenter.BasePresenter;
 import com.idea.zad.common.util.FragmentUtils;
-
-import butterknife.ButterKnife;
 
 /**
  * Created by Sha on 4/3/17.
@@ -50,7 +48,6 @@ public abstract class BaseFragment<T extends BasePresenter> extends FragmentUtil
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        ButterKnife.bind(this, view);
     }
 
     @Override

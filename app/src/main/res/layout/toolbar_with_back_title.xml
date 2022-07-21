@@ -1,4 +1,4 @@
-<android.support.v7.widget.Toolbar android:id="@+id/toolbar"
+<androidx.appcompat.widget.Toolbar android:id="@+id/toolbar"
     android:layout_width="match_parent"
     android:layout_height="?android:attr/actionBarSize"
     android:background="@color/toolbar"
@@ -34,4 +34,4 @@
 
     </RelativeLayout>
 
-</android.support.v7.widget.Toolbar>
+</androidx.appcompat.widget.Toolbar>

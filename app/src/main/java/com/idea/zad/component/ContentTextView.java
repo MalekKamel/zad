@@ -1,19 +1,16 @@
 package com.idea.zad.component;
 
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.GradientDrawable;
-import android.preference.PreferenceManager;
-import android.support.v4.content.ContextCompat;
+
+import androidx.core.content.ContextCompat;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.util.TypedValue;
 
 import com.idea.zad.R;
 import com.idea.zad.common.util.Utils;
-import com.idea.zad.util.SharedPref;
 
 public class ContentTextView extends BaseCustomTextView{
 

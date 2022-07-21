@@ -2,7 +2,6 @@ package com.idea.zad.component;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.widget.TextView;
 
 import com.idea.zad.util.SharedPref;
 
@@ -10,7 +9,7 @@ import com.idea.zad.util.SharedPref;
  * Created by Sha on 7/25/17.
  */
 
-public abstract class BaseCustomTextView extends android.support.v7.widget.AppCompatTextView {
+public abstract class BaseCustomTextView extends androidx.appcompat.widget.AppCompatTextView {
 
     protected SharedPref pref = SharedPref.getInstance();
 

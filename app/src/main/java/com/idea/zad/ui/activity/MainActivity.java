@@ -2,14 +2,14 @@ package com.idea.zad.ui.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.design.widget.NavigationView;
-import android.support.v4.app.Fragment;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.widget.Toolbar;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import com.google.android.material.navigation.NavigationView;
+import androidx.fragment.app.Fragment;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.TextView;
 
@@ -26,20 +26,15 @@ import com.idea.zad.ui.fragment.LectureSubcategoryFrag;
 
 import org.greenrobot.eventbus.Subscribe;
 
-import butterknife.BindView;
-
 public class MainActivity extends BaseActivity {
 
     private ActionBarDrawerToggle toggle;
     private Toolbar toolbar;
 
-    @BindView(R.id.drawer_layout)
     DrawerLayout mDrawerLayout;
 
-    @BindView(R.id.nav_view)
     NavigationView navigationView;
 
-    @BindView(R.id.tv_toolbarTitle)
     TextView tv_toolbarTitle;
 
     @Override
@@ -55,6 +50,10 @@ public class MainActivity extends BaseActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mDrawerLayout = findViewById(R.id.drawer_layout);
+        navigationView = findViewById(R.id.nav_view);
+        tv_toolbarTitle = findViewById(R.id.tv_toolbarTitle);
+
         // IMPORTANT: register here to consume toolbar title change event
         EventBusUtil.register(this);
 
@@ -84,44 +83,41 @@ public class MainActivity extends BaseActivity {
         if (navigationView != null) {
             navigationView.setItemIconTintList(null);
             navigationView.setNavigationItemSelectedListener(
-                    new NavigationView.OnNavigationItemSelectedListener() {
-                        @Override
-                        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                            Class clazz = null;
+                    item -> {
+                        Class clazz = null;
 
-                            switch (item.getItemId()){
-                                case R.id.drawer_search:
-                                    clazz = SearchActivity.class;
-                                    break;
+                        switch (item.getItemId()){
+                            case R.id.drawer_search:
+                                clazz = SearchActivity.class;
+                                break;
 
-                                case R.id.drawer_favorites:
-                                    clazz = FavoriteActivity.class;
-                                    break;
+                            case R.id.drawer_favorites:
+                                clazz = FavoriteActivity.class;
+                                break;
 
-                                case R.id.drawer_settings:
-                                    startActivityForResult(
-                                            new Intent(MainActivity.this, SettingsActivity.class),
-                                            RequestCode.SETTINGS_ACTIVITY);
-                                    break;
+                            case R.id.drawer_settings:
+                                startActivityForResult(
+                                        new Intent(MainActivity.this, SettingsActivity.class),
+                                        RequestCode.SETTINGS_ACTIVITY);
+                                break;
 
-                                case R.id.drawer_references:
-                                    clazz = ReferencesActivity.class;
-                                    break;
-                                case R.id.drawer_about:
-                                    clazz = AboutActivity.class;
-                                    break;
-                            }
-
-                            if (clazz !=  null)
-                                new Navigator(MainActivity.this).navigateToActivity(clazz);
-
-                            mDrawerLayout.closeDrawer(GravityCompat.START);
-                            return true;
+                            case R.id.drawer_references:
+                                clazz = ReferencesActivity.class;
+                                break;
+                            case R.id.drawer_about:
+                                clazz = AboutActivity.class;
+                                break;
                         }
+
+                        if (clazz !=  null)
+                            new Navigator(MainActivity.this).navigateToActivity(clazz);
+
+                        mDrawerLayout.closeDrawer(GravityCompat.START);
+                        return true;
                     });
         }
 
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         toggle = new ActionBarDrawerToggle(

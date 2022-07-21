@@ -3,7 +3,7 @@ package com.idea.zad.ui.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import com.idea.zad.ui.fragment.SettingsFragment;
 

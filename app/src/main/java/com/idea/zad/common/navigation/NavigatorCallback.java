@@ -1,8 +1,8 @@
 package com.idea.zad.common.navigation;
 
 import android.os.Parcelable;
-import android.support.annotation.NonNull;
-import android.support.v4.app.Fragment;
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
 
 /**
  * Created by Mickey on 4/1/17.

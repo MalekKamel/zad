@@ -1,12 +1,11 @@
 package com.idea.zad.ui.fragment;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.ImageView;
+
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.idea.zad.R;
 import com.idea.zad.adapter.LectureCategoryAdapter;
@@ -22,11 +21,9 @@ import org.greenrobot.eventbus.Subscribe;
 
 import java.util.ArrayList;
 
-import butterknife.BindView;
 
-public class LectureCategoryFrag extends BaseFragment{
+public class LectureCategoryFrag extends BaseFragment {
 
-    @BindView(R.id.rv)
     RecyclerView rv;
 
     @Override
@@ -46,13 +43,14 @@ public class LectureCategoryFrag extends BaseFragment{
     }
 
     private void setData() {
+        rv = getView().findViewById(R.id.rv);
         rv.setLayoutManager(new GridLayoutManager(getContext(), 2));
 
         String[] categoryTitles = getResources().getStringArray(R.array.category_titles);
         ArrayList<LectureCategory> categories = new ArrayList<>();
         LectureCategory category;
         int id = 1;
-        for (String title : categoryTitles){
+        for (String title : categoryTitles) {
             category = new LectureCategory();
             category.setTitle(title);
             category.setId(id);
@@ -74,7 +72,7 @@ public class LectureCategoryFrag extends BaseFragment{
 
     @Subscribe
     public void didSelectCategoryItem(EventBusObject<LectureCategory> event) {
-        switch (event.getActionTag()){
+        switch (event.getActionTag()) {
             case USER_SELECTED_CATEGORY:
                 LectureSubcategoryFrag frag = LectureSubcategoryFrag.getInstance(event.getObj());
                 new Navigator(getContext()).navigateToFragment(frag, true);

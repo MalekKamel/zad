@@ -17,8 +17,6 @@ import com.idea.zad.ui.fragment.LectureCategoryFrag;
 
 import java.util.ArrayList;
 
-import butterknife.BindView;
-import butterknife.OnClick;
 
 /**
  * Created by Sha on 4/20/17.
@@ -41,7 +39,8 @@ public class LectureCategoryAdapter
             R.drawable.ic_star_and_crescent,
             R.drawable.ic_mosque_2
     };
-    public LectureCategoryAdapter(ArrayList<LectureCategory> values){
+
+    public LectureCategoryAdapter(ArrayList<LectureCategory> values) {
         super(values);
     }
 
@@ -51,50 +50,36 @@ public class LectureCategoryAdapter
     }
 
     class Vh extends BaseViewHolder<LectureCategory> {
-        @BindView(R.id.tv_title)
         TextView tv_title;
-
-        @BindView(R.id.v_root)
         View v_root;
-
-        @BindView(R.id.iv_ic)
         ImageView iv_ic;
 
         private Vh(ViewGroup viewGroup) {
             super(viewGroup, R.layout.viewholder_category);
+            tv_title = itemView.findViewById(R.id.tv_title);
+            v_root = itemView.findViewById(R.id.v_root);
+            iv_ic = itemView.findViewById(R.id.iv_ic);
+            itemView.findViewById(R.id.v_root).setOnClickListener(v -> {
+                /**
+                 * Call
+                 * {@link LectureCategoryFrag#didSelectCategoryItem(EventBusObject)}
+                 */
+                EventBusUtil.post(new EventBusObject<>(
+                        getList().get(getAdapterPosition()),
+                        EventBusTag.USER_SELECTED_CATEGORY)
+                );
+            });
         }
 
         @Override
         public void bindView(LectureCategory data) {
             tv_title.setText(data.getTitle());
 
-            String drawableName = Utils.getCategoryDrawableName(getLayoutPosition() + 1);
+            String drawableName = Utils.getCategoryDrawableName(getAdapterPosition() + 1);
             v_root.setBackgroundResource(Utils.getDrawableIndentifier(drawableName));
 
-            iv_ic.setImageResource(images[getLayoutPosition()]);
+            iv_ic.setImageResource(images[getAdapterPosition()]);
         }
-
-        @OnClick({
-                R.id.v_root,
-        })
-        public void onClick(View v){
-            switch (v.getId()){
-
-                case R.id.v_root:
-                    /**
-                     * Call
-                     * {@link LectureCategoryFrag#didSelectCategoryItem(EventBusObject)}
-                     */
-                    EventBusUtil.post(new EventBusObject<>(
-                            getList().get(getLayoutPosition()),
-                            EventBusTag.USER_SELECTED_CATEGORY)
-                    );
-                    break;
-
-            }
-        }
-        
-
     }
 
 }
