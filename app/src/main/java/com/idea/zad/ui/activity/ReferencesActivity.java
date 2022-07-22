@@ -28,7 +28,7 @@ public class ReferencesActivity extends BaseActivity implements ToolbarActionIni
         super.onCreate(savedInstanceState);
         findViewById(R.id.iv_islamDoorLogo).setOnClickListener(v -> {
             Utils.createIntentChooser(
-                    "http://www.islamdoor.com/k/",
+                    "http://www.islamsbudskap.com/ig/khutba/k",
                     getString(R.string.twitter),
                     this
             );

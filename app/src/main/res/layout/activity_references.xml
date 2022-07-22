@@ -14,6 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/islam_door_logo"
+        android:scaleType="fitXY"
         android:layout_margin="10dp"/>
 
     <com.idea.zad.component.AppCustomTv
