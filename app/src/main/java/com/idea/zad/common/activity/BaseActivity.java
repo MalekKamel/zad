@@ -26,7 +26,6 @@ import com.idea.zad.constants.C;
  * 1 - Hold presenter and dialog reference.
  * 2 - Init presenter.
  * 3 - setContentView.
- * 4 - Init ButterKnife.
  * 5 - Bind presenter to Activity lifecycle.
  * @param <T> presenter generic type whose parent is {@link BasePresenter}
  */

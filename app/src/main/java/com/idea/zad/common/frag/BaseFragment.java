@@ -18,7 +18,6 @@ import com.idea.zad.common.util.FragmentUtils;
  * 1 - Hold presenter and dialog reference.
  * 2 - Init presenter.
  * 3 - set View.
- * 4 - Init ButterKnife.
  * 5 - Bind presenter to Fragment lifecycle.
  * @param <T> presenter generic type whose parent is {@link BasePresenter}
  */

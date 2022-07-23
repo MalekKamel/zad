@@ -30,3 +30,5 @@ api.json
 
 /vendor
 /homebrew
+*.jks
+keystore_info.txt

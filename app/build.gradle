@@ -10,7 +10,7 @@ android {
         applicationId "com.idea.zad"
         minSdkVersion 21
         targetSdkVersion 32
-        versionCode 2
+        versionCode 3
         versionName "2.0"
 
         vectorDrawables.useSupportLibrary = true
@@ -27,6 +27,13 @@ android {
         resources {
             excludes += ['META-INF/rxjava.properties', 'META-INF/DEPENDENCIES.txt', 'META-INF/LICENSE.txt', 'META-INF/NOTICE.txt', 'META-INF/NOTICE', 'META-INF/LICENSE', 'META-INF/DEPENDENCIES', 'META-INF/notice.txt', 'META-INF/license.txt', 'META-INF/dependencies.txt', 'META-INF/LGPL2.1', 'META-INF/MANIFEST.MF']
         }
+    }
+
+    lintOptions {
+//        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
     }
 }
 
