@@ -25,7 +25,7 @@ Zad is an islamic  app contains more than 500 written lectures with 10 different
 ### 🛡 License
 <details>
     <summary>
-        click to reveal License
+        Click to reveal License
     </summary>
     
 ```
